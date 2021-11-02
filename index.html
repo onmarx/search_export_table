@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Export Data to Excel File</title>
+  <!-- boostrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="loader_container">
+    <div class="loader"></div>
+  </div>
+  <div class="container">
+    <h2 class="text-center mt-4 mb-4">Search & Export HTML table data to excel file</h2>
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col col-md-6 d-flex align-items-center">
+            <input type="search" class="form-control" placeholder="Serach data 🔍" id="search" autocomplete="off">
+          </div>
+          <div class="col col-md-6 d-flex justify-content-end align-items-center">
+            <button class="btn btn-success" id="bntExport">Export</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- table -->
+    <h5 class="mt-3">User Random Api</h5>
+    <div class="mt-2">
+        <!-- pagination -->
+        <p id="note"></p>
+    </div>
+    <div class="mt-2 container-table">
+      <table class="table table-striped sticky" id="table">
+        <thead class="text-center">
+          <tr>
+            <th>#id</th>
+            <th>Gender</th>
+            <th>Names <button id="btn-order" class="order">🔃</button></th>
+            <th>Email</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody id="response" class="text-center"></tbody>
+      </table>
+      
+    </div>
+  </div>
+  <!-- boostrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <!-- sheetjs -->
+  <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
